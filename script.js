@@ -249,15 +249,15 @@
 
 // Introduction to Arrays
 
-const friend1 = "Mike";
-const friend2 = "Steven";
-const friend3 = "Peter";
+// const friend1 = "Mike";
+// const friend2 = "Steven";
+// const friend3 = "Peter";
 
 // imagine if we had ten friend to group together this isn't very efficent this is why we have arrays
 // two most important data structures are arrays and object
 
-const friends = ["Mike", "Steven", "Peter"];
-console.log(friends);
+// const friends = ["Mike", "Steven", "Peter"];
+// console.log(friends);
 
 // another way to write an array
 // can hold as many values as we want, values of any type
@@ -268,42 +268,74 @@ console.log(friends);
 // new key word
 // console.log(years);
 
-console.log(friends[0]); // Expected output: `Mike`
-// arrays are zero indexed so 0, 1, 2... so on and so forth
+// console.log(friends[0]); // Expected output: `Mike`
+// // arrays are zero indexed so 0, 1, 2... so on and so forth
 
-console.log(friends.length); // Expected output: 3;
-// length property
-// amount of elements in the array & it is not zero based
-// gives us amount of elements in the array
+// console.log(friends.length); // Expected output: 3;
+// // length property
+// // amount of elements in the array & it is not zero based
+// // gives us amount of elements in the array
 
-console.log(friends[friends.length - 1]); // last element
-console.log(friends[2]); // Peter
+// console.log(friends[friends.length - 1]); // last element
+// console.log(friends[2]); // Peter
 
-friends[2] = "Lizzie"; // re-assign element [2] in friends array to lizzie
-console.log(friends[2]); // Lizzie
+// friends[2] = "Lizzie"; // re-assign element [2] in friends array to lizzie
+// console.log(friends[2]); // Lizzie
 
-const firstName = `Joshua`;
-const joshua = [firstName, "Alvarado", 2037 - 1993, "teacher", friends];
-console.log(joshua);
+// const firstName = `Joshua`;
+// const joshua = [firstName, "Alvarado", 2037 - 1993, "teacher", friends];
+// console.log(joshua);
 
-// Excercise
+// // Excercise
 
-function calcAge(birthYear) {
-  return 2037 - birthYear;
-}
+// function calcAge(birthYear) {
+//   return 2037 - birthYear;
+// }
 
-const years = [1990, 1967, 2002, 2010, 2018];
+// const years = [1990, 1967, 2002, 2010, 2018];
 
-const age1 = calcAge(years[0]);
-const age2 = calcAge(years[1]);
-const age3 = calcAge(years[years.length - 1]);
-console.log(age1, age2, age3);
-// cannot do operations in arrays
+// const age1 = calcAge(years[0]);
+// const age2 = calcAge(years[1]);
+// const age3 = calcAge(years[years.length - 1]);
+// console.log(age1, age2, age3);
+// // cannot do operations in arrays
 
-const ages = [
-  calcAge(years[0]),
-  calcAge(years[1]),
-  calcAge(years[years.length - 1]),
-];
+// const ages = [
+//   calcAge(years[0]),
+//   calcAge(years[1]),
+//   calcAge(years[years.length - 1]),
+// ];
 
-console.log(ages);
+// console.log(ages);
+
+// Basic Array Operations (Methods)
+
+// Add Elements
+
+const friends = ["Mike", "Josh", "Lizzie"];
+friends.push("Tyler");
+// .push pushes Tyler to the end of the array
+// Expected output: Mike, Josh, Lizzie, Tyler
+console.log(friends);
+friends.unshift("John");
+// .unshift adds to the front of the array
+// Expcted output: John, Mike, Josh, Lizzie, Tyler
+console.log(friends);
+
+// Remove Elements
+const popped = friends.pop();
+// removes from the end of the array
+// Expected output: John, Mike, Josh, Lizzie
+console.log(friends);
+// can also return removed elements
+console.log(popped);
+// Expected reutrn: Tyler
+friends.shift();
+// removes from the front of the array
+// Expected reutrn: Mike, Josh, Lizzie
+console.log(friends);
+console.log(friends.indexOf(`Josh`));
+// Expected output: 1
+// - 1 if an element is not in the array
+console.log(friends.includes(`Josh`)); // true
+console.log(friends.includes(`Ace`)); // false
