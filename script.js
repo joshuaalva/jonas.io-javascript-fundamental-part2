@@ -312,30 +312,68 @@
 
 // Add Elements
 
-const friends = ["Mike", "Josh", "Lizzie"];
-friends.push("Tyler");
-// .push pushes Tyler to the end of the array
-// Expected output: Mike, Josh, Lizzie, Tyler
-console.log(friends);
-friends.unshift("John");
-// .unshift adds to the front of the array
-// Expcted output: John, Mike, Josh, Lizzie, Tyler
-console.log(friends);
+// const friends = ["Mike", "Josh", "Lizzie"];
+// friends.push("Tyler");
+// // .push pushes Tyler to the end of the array
+// // Expected output: Mike, Josh, Lizzie, Tyler
+// console.log(friends);
+// friends.unshift("John");
+// // .unshift adds to the front of the array
+// // Expcted output: John, Mike, Josh, Lizzie, Tyler
+// console.log(friends);
 
-// Remove Elements
-const popped = friends.pop();
-// removes from the end of the array
-// Expected output: John, Mike, Josh, Lizzie
-console.log(friends);
-// can also return removed elements
-console.log(popped);
-// Expected reutrn: Tyler
-friends.shift();
-// removes from the front of the array
-// Expected reutrn: Mike, Josh, Lizzie
-console.log(friends);
-console.log(friends.indexOf(`Josh`));
-// Expected output: 1
-// - 1 if an element is not in the array
-console.log(friends.includes(`Josh`)); // true
-console.log(friends.includes(`Ace`)); // false
+// // Remove Elements
+// const popped = friends.pop();
+// // removes from the end of the array
+// // Expected output: John, Mike, Josh, Lizzie
+// console.log(friends);
+// // can also return removed elements
+// console.log(popped);
+// // Expected reutrn: Tyler
+// friends.shift();
+// // removes from the front of the array
+// // Expected reutrn: Mike, Josh, Lizzie
+// console.log(friends);
+// console.log(friends.indexOf(`Josh`));
+// // Expected output: 1
+// // - 1 if an element is not in the array
+// console.log(friends.includes(`Josh`)); // true
+// console.log(friends.includes(`Ace`)); // false
+
+// Challenge #2
+
+// function calcTip(tip) {
+//   if (tip >= 50 && tip <= 300) {
+//     return tip * 0.15;
+//   } else {
+//     return tip * 0.2;
+//   }
+// }
+
+// const bills = [125, 555, 44];
+// const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+// const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+// console.log(total);
+
+// Code passed all of the test
+
+// Introduction to Objects
+// in objects you define key value pairs
+
+const jonas = {
+  firstName: "Jonas",
+  lastName: "Schmedtmann",
+  age: 2037 - 1991,
+  job: "teacher",
+  friends: ["Mike", "Peter", "Steven"],
+};
+
+// in arrays you cannot name these keys or properties
+// object Jonas has five properties
+// maybe the most fundamental concept in the jS language
+// object literal syntax
+// in objects the order of the elements does not matter
+// arrays for more ordered data and objects for more unstructured data
+// or objects we want to name
+
+// Dot vs. Bracket Notation
