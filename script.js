@@ -360,13 +360,13 @@
 // Introduction to Objects
 // in objects you define key value pairs
 
-const jonas = {
-  firstName: "Jonas",
-  lastName: "Schmedtmann",
-  age: 2037 - 1991,
-  job: "teacher",
-  friends: ["Mike", "Peter", "Steven"],
-};
+// const jonas = {
+//   firstName: "Jonas",
+//   lastName: "Schmedtmann",
+//   age: 2037 - 1991,
+//   job: "teacher",
+//   friends: ["Mike", "Peter", "Steven"],
+// };
 
 // in arrays you cannot name these keys or properties
 // object Jonas has five properties
@@ -377,3 +377,56 @@ const jonas = {
 // or objects we want to name
 
 // Dot vs. Bracket Notation
+
+// const jonas = {
+//   firstName: "Jonas",
+//   lastName: "Schmedtmann",
+//   age: 2037 - 1991,
+//   job: "teacher",
+//   friends: ["Mike", "Peter", "Steven"],
+// };
+
+// console.log(jonas);
+
+// console.log(jonas.lastName); // dot notation for looking through an object
+// console.log(jonas["lastName"]); // bracket notation
+
+// const nameKey = "Name";
+// console.log(jonas["first" + nameKey]);
+// console.log(jonas["last" + nameKey]);
+
+// can put any expression inside of the brackets
+
+// const interestedIn = prompt(
+//   "What do you want to know about Jonas? Choose between firstName, lastName, age, job, and friends"
+// );
+// console.log(jonas[interestedIn]);
+// expression between brackets will get evaluated vs dot being direct
+// undefined is a falsy value
+
+// if (jonas[interestedIn]) {
+//   console.log(jonas[interestedIn]);
+// } else {
+//   console.log(`Wrong request!`);
+// }
+
+// jonas.location = `Portugal`;
+// jonas["twitter"] = `@jonasschmedtman`;
+// console.log(jonas);
+
+// Challenge
+// "Jonas has 3 friends and his best friend is called Mike"
+// write this without hard coding it
+// easy work
+
+const jonas = {
+  firstName: "Jonas",
+  lastName: "Schmedtmann",
+  age: 2037 - 1991,
+  job: "teacher",
+  friends: ["Mike", "Peter", "Steven"],
+};
+
+console.log(
+  `${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`
+);
