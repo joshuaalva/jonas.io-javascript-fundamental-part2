@@ -419,14 +419,71 @@
 // write this without hard coding it
 // easy work
 
+// const jonas = {
+//   firstName: "Jonas",
+//   lastName: "Schmedtmann",
+//   age: 2037 - 1991,
+//   job: "teacher",
+//   friends: ["Mike", "Peter", "Steven"],
+// };
+
+// console.log(
+//   `${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`
+// );
+
+// const myCountry = {
+//   country: "Finland",
+//   capital: "Helsinki",
+//   language: "finnish",
+//   population: 6,
+//   neighbors: ["Norway", "Sweden", "Russia"],
+// };
+
+// console.log(
+//   `${myCountry.country} has ${myCountry.population} million ${myCountry.language}-speaking people ${myCountry.length} neighboring countries and a capital called ${myCountry.capital}`
+// );
+
+// Increasing population using dot notation
+// myCountry.population += 2;
+// console.log(myCountry.population);
+
+// Increasing population using bracket notation
+// myCountry["population"] -= 2;
+// console.log(myCountry.population);
+
+// Object Methods
+
 const jonas = {
   firstName: "Jonas",
   lastName: "Schmedtmann",
-  age: 2037 - 1991,
+  birthYear: 1991,
   job: "teacher",
   friends: ["Mike", "Peter", "Steven"],
+  hasDriversLicense: true,
+  // need an expression in an object
+  // just delcaring the function would not word
+  // using calcAge as a 'key'
+  //   calcAge: function (birthYear) {
+  //     return 2037 - birthYear;
+  //   },
+
+  //   calcAge: function () {
+  //     return 2037 - this.birthYear;
+  //   },
+
+  calcAge: function () {
+    this.age = 2037 - this.birthYear;
+    return this.age;
+  },
+
+  getSummary: function () {
+    return `${jonas.firstName} is a ${jonas.calcAge()}-year old ${
+      jonas.job
+    } and he has ${this.hasDriversLicense ? "a" : "no"} driver's license`;
+  },
 };
 
-console.log(
-  `${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`
-);
+console.log(jonas.calcAge());
+console.log(jonas.getSummary());
+
+// Coding Excercise 7: Challenge #3
