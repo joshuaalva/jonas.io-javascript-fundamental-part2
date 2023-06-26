@@ -521,3 +521,22 @@ if (mark.bmi > john.bmi) {
     `${john.fullName}'s BMI (${john.bmi}) is higher than ${mark.fullName}'s BMI (${mark.bmi})`
   );
 }
+
+// Iteration: The for Loop
+
+// loops are fundamental of every programming language
+// allow us to automate repetitive tasks
+
+console.log("lifting weights repetition 1");
+console.log("lifting weights repetition 2");
+console.log("lifting weights repetition 3");
+console.log("lifting weights repetition 4");
+
+// ^^ not ideal or best practice that's what loops are for
+// for loop
+// for loops keeps running while the condition is true
+// needs a stop condition 'i < 10'
+
+for (let i = 0; i < 10; i++) {
+  console.log(`lifting weights repetition [i]`);
+}
