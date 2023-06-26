@@ -540,3 +540,5 @@ console.log("lifting weights repetition 4");
 for (let i = 0; i < 10; i++) {
   console.log(`lifting weights repetition [i]`);
 }
+
+// Looping Arrays, Breaking, and Continuing
