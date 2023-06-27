@@ -488,57 +488,105 @@
 
 // Coding Excercise 7: Challenge #3
 
-const mark = {
-  fullName: "Mark Miller",
-  mass: 78,
-  height: 1.69,
-  calcBMI: function () {
-    this.bmi = this.mass / this.height ** 2;
-    return this.bmi;
-  },
-};
+// const mark = {
+//   fullName: "Mark Miller",
+//   mass: 78,
+//   height: 1.69,
+//   calcBMI: function () {
+//     this.bmi = this.mass / this.height ** 2;
+//     return this.bmi;
+//   },
+// };
 
-const john = {
-  fullName: "John Smith",
-  mass: 92,
-  height: 1.95,
-  calcBMI: function () {
-    this.bmi = this.mass / this.height ** 2;
-    return this.bmi;
-  },
-};
+// const john = {
+//   fullName: "John Smith",
+//   mass: 92,
+//   height: 1.95,
+//   calcBMI: function () {
+//     this.bmi = this.mass / this.height ** 2;
+//     return this.bmi;
+//   },
+// };
 
-john.calcBMI();
-mark.calcBMI();
-console.log(mark.bmi, john.bmi);
+// john.calcBMI();
+// mark.calcBMI();
+// console.log(mark.bmi, john.bmi);
 
-if (mark.bmi > john.bmi) {
-  console.log(
-    `${mark.fullName}'s BMI (${mark.bmi}) is higher than ${john.fullName}'s BMI (${john.bmi})`
-  );
-} else if (john.bmi < mark.bmi) {
-  console.log(
-    `${john.fullName}'s BMI (${john.bmi}) is higher than ${mark.fullName}'s BMI (${mark.bmi})`
-  );
-}
+// if (mark.bmi > john.bmi) {
+//   console.log(
+//     `${mark.fullName}'s BMI (${mark.bmi}) is higher than ${john.fullName}'s BMI (${john.bmi})`
+//   );
+// } else if (john.bmi < mark.bmi) {
+//   console.log(
+//     `${john.fullName}'s BMI (${john.bmi}) is higher than ${mark.fullName}'s BMI (${mark.bmi})`
+//   );
+// }
 
 // Iteration: The for Loop
 
 // loops are fundamental of every programming language
 // allow us to automate repetitive tasks
 
-console.log("lifting weights repetition 1");
-console.log("lifting weights repetition 2");
-console.log("lifting weights repetition 3");
-console.log("lifting weights repetition 4");
+// console.log("lifting weights repetition 1");
+// console.log("lifting weights repetition 2");
+// console.log("lifting weights repetition 3");
+// console.log("lifting weights repetition 4");
 
 // ^^ not ideal or best practice that's what loops are for
 // for loop
 // for loops keeps running while the condition is true
 // needs a stop condition 'i < 10'
 
-for (let i = 0; i < 10; i++) {
-  console.log(`lifting weights repetition [i]`);
-}
+// for (let i = 0; i < 10; i++) {
+//   console.log(`lifting weights repetition [i]`);
+// }
 
 // Looping Arrays, Breaking, and Continuing
+
+const jonasArray = [
+  "Jonas",
+  "Schmedtman",
+  2037 - 1991,
+  "teacher",
+  ["Michael", "Peter", "Steven"],
+];
+
+const types = [];
+
+for (let i = 0; i < jonasArray.length; i++) {
+  // reading from jonas array
+  console.log(jonasArray[i], typeof jonasArray[i]);
+  console.log((types[i] = typeof jonasArray[i]));
+  // filling types array
+  // types[i] = typeof jonasArray[i];
+  // filling using push
+  types.push(typeof jonasArray[i]);
+}
+
+console.log(types);
+
+const years = [1991, 2007, 1969, 2020];
+const ages = [];
+
+for (let i = 0; i < years.length; i++) {
+  ages.push(2037 - years[i]);
+}
+
+console.log(ages);
+
+// continue and break
+// continue
+console.log(`--- only strings ---`);
+for (let i = 0; i < jonasArray.length; i++) {
+  // type of current element is not a string --> continue
+  if (typeof jonasArray[i] !== "string") continue;
+  console.log(jonasArray[i], typeof jonasArray[i]);
+}
+
+// break
+console.log(`--- break with number ---`);
+for (let i = 0; i < jonasArray.length; i++) {
+  // type of current element a number --> break
+  if (typeof jonasArray[i] === `number`) break;
+  console.log(jonasArray[i], typeof jonasArray[i]);
+}
