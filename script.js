@@ -657,3 +657,66 @@
 // }
 
 // The while loop
+
+// for (let rep = 1; rep <= 10; rep++) {
+//   console.log(`lifting weights repetition ${rep}`);
+// }
+
+// let rep = 1;
+// while (rep <= 10) {
+//   console.log(`lifting weights ${rep}`);
+//   rep++;
+// }
+
+// while loop is more versatile
+// doesn't actually need a counter just needs a condition
+// condition can be any condition doesn't have to be related to a counter
+
+// let dice = Math.trunc(Math.random() * 6) + 1;
+// console.log(dice);
+// while (dice !== 6) {
+// if 0 it won't run at all
+// condition without a counter just use a while loop
+// when you know how many times you need to iterate use a for loop
+//   console.log(`You rolled a ${dice}`);
+//   dice = Math.trunc(Math.random() * 6) + 1;
+//   if (dice === 6) {
+//     console.log(`loop is about to end... `);
+//   }
+// }
+
+// Lecture: The while Loop
+
+// recreate the challenge from the lecture 'looping arrays, breaking and continuing' but this time using a while loop (calle the array percentages 3)
+// reflect on what solution you like better for this task: the for loop or the while loop?
+
+function percentageOfWorld1(populations) {
+  return (populations / 7900) * 100;
+}
+
+const populations = [10, 1441, 332, 83];
+const percentages2 = [];
+
+for (let i = 0; i < populations.length; i++) {
+  const perc = percentageOfWorld1(populations[i]);
+  percentages2.push(perc);
+}
+
+console.log(percentages2);
+
+console.log(`--- while loop ---`);
+
+const percentages3 = [];
+
+let i = 0;
+while (i < populations.length) {
+  const perc = percentageOfWorld1(populations[i]);
+  percentages3.push(perc);
+  i++;
+}
+
+console.log(percentages3);
+
+// do more studying on for and while loops
+
+// Coding Challenge #4
