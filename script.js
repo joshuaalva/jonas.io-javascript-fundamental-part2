@@ -590,3 +590,9 @@ for (let i = 0; i < jonasArray.length; i++) {
   if (typeof jonasArray[i] === `number`) break;
   console.log(jonasArray[i], typeof jonasArray[i]);
 }
+
+// Lecture Iteration: The For Loop
+
+// Lecture: Looping Arrays, Breaking, and Continuing
+
+// Looping Backwards and Loops in Loops
