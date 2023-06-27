@@ -543,56 +543,117 @@
 
 // Looping Arrays, Breaking, and Continuing
 
-const jonasArray = [
-  "Jonas",
-  "Schmedtman",
-  2037 - 1991,
-  "teacher",
-  ["Michael", "Peter", "Steven"],
-];
+// const jonasArray = [
+//   "Jonas",
+//   "Schmedtman",
+//   2037 - 1991,
+//   "teacher",
+//   ["Michael", "Peter", "Steven"],
+// ];
 
-const types = [];
+// const types = [];
 
-for (let i = 0; i < jonasArray.length; i++) {
-  // reading from jonas array
-  console.log(jonasArray[i], typeof jonasArray[i]);
-  console.log((types[i] = typeof jonasArray[i]));
-  // filling types array
-  // types[i] = typeof jonasArray[i];
-  // filling using push
-  types.push(typeof jonasArray[i]);
-}
+// for (let i = 0; i < jonasArray.length; i++) {
+// reading from jonas array
+// console.log(jonasArray[i], typeof jonasArray[i]);
+// console.log((types[i] = typeof jonasArray[i]));
+// filling types array
+// types[i] = typeof jonasArray[i];
+// filling using push
+//   types.push(typeof jonasArray[i]);
+// }
 
-console.log(types);
+// console.log(types);
 
-const years = [1991, 2007, 1969, 2020];
-const ages = [];
+// const years = [1991, 2007, 1969, 2020];
+// const ages = [];
 
-for (let i = 0; i < years.length; i++) {
-  ages.push(2037 - years[i]);
-}
+// for (let i = 0; i < years.length; i++) {
+//   ages.push(2037 - years[i]);
+// }
 
-console.log(ages);
+// console.log(ages);
 
 // continue and break
 // continue
-console.log(`--- only strings ---`);
-for (let i = 0; i < jonasArray.length; i++) {
-  // type of current element is not a string --> continue
-  if (typeof jonasArray[i] !== "string") continue;
-  console.log(jonasArray[i], typeof jonasArray[i]);
-}
+// console.log(`--- only strings ---`);
+// for (let i = 0; i < jonasArray.length; i++) {
+//   // type of current element is not a string --> continue
+//   if (typeof jonasArray[i] !== "string") continue;
+//   console.log(jonasArray[i], typeof jonasArray[i]);
+// }
 
 // break
-console.log(`--- break with number ---`);
-for (let i = 0; i < jonasArray.length; i++) {
-  // type of current element a number --> break
-  if (typeof jonasArray[i] === `number`) break;
-  console.log(jonasArray[i], typeof jonasArray[i]);
-}
+// console.log(`--- break with number ---`);
+// for (let i = 0; i < jonasArray.length; i++) {
+//   // type of current element a number --> break
+//   if (typeof jonasArray[i] === `number`) break;
+//   console.log(jonasArray[i], typeof jonasArray[i]);
+// }
 
 // Lecture Iteration: The For Loop
+// 1. There are elections in your country! In a small town, there are only 50 voters. Use a for loop to simulate the 50 people voting, by logging a string like thsi to the console: 'Vote numbre 1 is currently voting'
+
+// for (let i = 0; i <= 50; i++) {
+//   console.log(`Vote number ${i} is currently voting!`);
+// }
 
 // Lecture: Looping Arrays, Breaking, and Continuing
+// use a for loop to compute an array called 'percentages2' containing the percentages of the world population for the 4 population values. Use the function 'percentage of world 1' that you created earlier.
+// confirm that 'percentages2' contains exactly the same values as the 'percentages' array that we craeted manually in the previous assignment, and reflect on how much better the solution is.
+
+// function percentageOfWorld1(population) {
+//   return (population / 7900) * 100;
+// }
+
+// const population = [10, 1441, 332, 83];
+// const percentages2 = [];
+
+// for (let i = 0; i < population.length; i++) {
+//   const perc = percentageOfWorld1(population[i]);
+//   percentages2.push(perc);
+// }
+
+// console.log(percentages2);
 
 // Looping Backwards and Loops in Loops
+
+// const jonasArray = [
+//   "Jonas",
+//   "Schmedtman",
+//   2037 - 1991,
+//   "teacher",
+//   ["Michael", "Peter", "Steven"],
+// ];
+
+// for (let i = jonasArray.length - 1; i >= 0; i--) {
+//   console.log(i, jonasArray[i]);
+// }
+
+// Lecture:
+// Store this array of arrays into a variable called listofneighbors
+// log only the niehgoring countries to the console, one by one, not the entire arrays. Log a string like 'neighbor: canada' for each country
+// you will need a loop inside a loop for this.
+
+// let listOfNeighbors = [
+//   ["Canda", "Mexico"],
+//   ["Spain"],
+//   ["Norway", "Sweden", "Russia"],
+// ];
+
+// for (let i = 0; i < listOfNeighbors.length; i++) {
+//   for (let y = 0; y < listOfNeighbors[i].length; y++)
+//     console.log(`neighbor: ${listOfNeighbors[i][y]}`);
+// }
+
+// Loop inside of a Loop
+
+// for (let excercise = 1; excercise <= 3; excercise++) {
+//   console.log(`starting excercise ${excercise}`);
+
+//   for (let rep = 1; rep < 6; rep++) {
+//     console.log(`lifting weight repeititon ${rep}`);
+//   }
+// }
+
+// The while loop
