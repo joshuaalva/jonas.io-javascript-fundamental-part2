@@ -690,33 +690,88 @@
 // recreate the challenge from the lecture 'looping arrays, breaking and continuing' but this time using a while loop (calle the array percentages 3)
 // reflect on what solution you like better for this task: the for loop or the while loop?
 
-function percentageOfWorld1(populations) {
-  return (populations / 7900) * 100;
-}
+// function percentageOfWorld1(populations) {
+//   return (populations / 7900) * 100;
+// }
 
-const populations = [10, 1441, 332, 83];
-const percentages2 = [];
+// const populations = [10, 1441, 332, 83];
+// const percentages2 = [];
 
-for (let i = 0; i < populations.length; i++) {
-  const perc = percentageOfWorld1(populations[i]);
-  percentages2.push(perc);
-}
+// for (let i = 0; i < populations.length; i++) {
+//   const perc = percentageOfWorld1(populations[i]);
+//   percentages2.push(perc);
+// }
 
-console.log(percentages2);
+// console.log(percentages2);
 
-console.log(`--- while loop ---`);
+// console.log(`--- while loop ---`);
 
-const percentages3 = [];
+// const percentages3 = [];
 
-let i = 0;
-while (i < populations.length) {
-  const perc = percentageOfWorld1(populations[i]);
-  percentages3.push(perc);
-  i++;
-}
+// let i = 0;
+// while (i < populations.length) {
+//   const perc = percentageOfWorld1(populations[i]);
+//   percentages3.push(perc);
+//   i++;
+// }
 
-console.log(percentages3);
+// console.log(percentages3);
 
 // do more studying on for and while loops
 
 // Coding Challenge #4
+
+// Let's improve Steven's tip calculator even more, this time using loops!
+
+// Your tasks:
+
+// Create an array called bills containing all 10 test bill values.
+
+// Create empty arrays for the tips and the totals (tips and totals)
+
+// Use the calcTip function we wrote before (included in the starter code) to calculate tips and total values (bill + tip) for every bill value in the bills array. Use a for loop to perform the 10 calculations!
+
+const calcTip = function (bill) {
+  return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+};
+
+/* Write your code below. Good luck! 🙂 */
+
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tips = [];
+const totals = [];
+
+// my solution
+// problem is i was calculating twice
+for (let i = 0; i < bills.length; i++) {
+  tips.push(calcTip(bills[i]));
+  totals.push(tips[i] + bills[i]);
+}
+
+// simpler solution - given answer
+for (let i = 0; i < bills.length; i++) {
+  const tip = calcTip(bills[i]);
+  tips.push(tip);
+  totals.push(tip + bills[i]);
+}
+
+console.log(bills, tips, totals);
+// console.log(tips);
+// console.log(totals);
+
+// Bonus *for fun*
+
+const calcAverage = function (arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    // sum = sum + arr[i];
+    sum += arr[i];
+  }
+  // console.log(sum);
+  return sum / arr.length;
+};
+
+calcAverage([2, 3, 6]); // expected: 11
+console.log(calcAverage([2, 3, 7]));
+console.log(calcAverage(totals));
+console.log(calcAverage(tips));
