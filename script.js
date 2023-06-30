@@ -731,47 +731,107 @@
 
 // Use the calcTip function we wrote before (included in the starter code) to calculate tips and total values (bill + tip) for every bill value in the bills array. Use a for loop to perform the 10 calculations!
 
-const calcTip = function (bill) {
-  return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
-};
+// const calcTip = function (bill) {
+//   return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+// };
 
 /* Write your code below. Good luck! 🙂 */
 
-const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
-const tips = [];
-const totals = [];
+// const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+// const tips = [];
+// const totals = [];
 
 // my solution
 // problem is i was calculating twice
-for (let i = 0; i < bills.length; i++) {
-  tips.push(calcTip(bills[i]));
-  totals.push(tips[i] + bills[i]);
-}
+// for (let i = 0; i < bills.length; i++) {
+//   tips.push(calcTip(bills[i]));
+//   totals.push(tips[i] + bills[i]);
+// }
 
 // simpler solution - given answer
-for (let i = 0; i < bills.length; i++) {
-  const tip = calcTip(bills[i]);
-  tips.push(tip);
-  totals.push(tip + bills[i]);
-}
+// for (let i = 0; i < bills.length; i++) {
+//   const tip = calcTip(bills[i]);
+//   tips.push(tip);
+//   totals.push(tip + bills[i]);
+// }
 
-console.log(bills, tips, totals);
+// console.log(bills, tips, totals);
 // console.log(tips);
 // console.log(totals);
 
 // Bonus *for fun*
 
-const calcAverage = function (arr) {
-  let sum = 0;
-  for (let i = 0; i < arr.length; i++) {
-    // sum = sum + arr[i];
-    sum += arr[i];
-  }
-  // console.log(sum);
-  return sum / arr.length;
-};
+// const calcAverage = function (arr) {
+//   let sum = 0;
+//   for (let i = 0; i < arr.length; i++) {
+// sum = sum + arr[i];
+//   sum += arr[i];
+// }
+// console.log(sum);
+//   return sum / arr.length;
+// };
 
-calcAverage([2, 3, 6]); // expected: 11
-console.log(calcAverage([2, 3, 7]));
-console.log(calcAverage(totals));
-console.log(calcAverage(tips));
+// calcAverage([2, 3, 6]); // expected: 11
+// console.log(calcAverage([2, 3, 7]));
+// console.log(calcAverage(totals));
+// console.log(calcAverage(tips));
+
+// Debugging with Console and Breakpoints
+
+// const measureKelvin = function () {
+//   const measurement = {
+//     type: "temperature",
+//     unit: "celsius",
+//     value: prompt("Degress celsius:"),
+//   };
+
+//   const kelvin = measurement.value + 273;
+//   return kelvin;
+// };
+// a identify the bug
+// console.log(measureKelvin()); // just adds 10 + 273
+
+// const measureKelvin = function () {
+//   const measurement = {
+//     type: "temperature",
+//     unit: "celsius",
+//     value: Number(prompt("Degress celsius:")), // this will always be a string b/c prompt
+//   }; // explicitly add number
+
+//   console.log(measurement.value);
+//   console.table(measurement);
+//   console.warn();
+//   console.error();
+//   const kelvin = measurement.value + 273;
+//   return kelvin;
+// };
+// a identify the bug
+// console.log(measureKelvin()); // just adds 10 + 273
+
+// using source and using break points
+
+// developer skills & editor setup
+// coding challenge #1
+
+// give an array of forecasted maximum temperatures, the thermometer displays a string with the given temperates.
+// 1. create a function 'print forecast' which takes in an array 'arr' and logs a string like the above to the console.
+// try it woth both test datasets
+
+// answer:
+// create function print forecast
+// function takes in array 'array'
+// logs a string back to the console
+// function must label each value in the array a different 'day'
+// [17, 21, 23] >> 17 in 1 day, 21 in 2 days
+function printForecast(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    const forecast = `${arr[i]}˚C in ${[i + 1]} days`;
+    console.log(forecast);
+  }
+}
+
+// was originally recieving undefined don't need to console.log the function seperately
+// don't forget
+printForecast([17, 21, 23]);
+console.log(`data set two --->`);
+printForecast([12, 5, -5, 0, 4]);
