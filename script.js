@@ -835,3 +835,6 @@ function printForecast(arr) {
 printForecast([17, 21, 23]);
 console.log(`data set two --->`);
 printForecast([12, 5, -5, 0, 4]);
+
+// i added this to the wrong file oops.
+// doesn't make much of a difference
